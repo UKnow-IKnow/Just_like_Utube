@@ -8,9 +8,11 @@ import Video from './Video'
 const Feed = () => {
 
   const[selectedCategory,setSelectedCategory]= useState('Home')
+  const[video, setVideo]=useState([])
 
   useEffect(() => {
     api(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) => setVideo(data.items))
   }, [selectedCategory])
 
   return (
@@ -43,7 +45,7 @@ const Feed = () => {
           </span>
         </Typography>
 
-        <Video video={[]} />
+        <Video video={video} />
       </Box>
     </Stack>
   )
