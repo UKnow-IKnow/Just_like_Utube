@@ -10,10 +10,11 @@ const SearchBar = () => {
         onSubmit={() => {}}
         sx={{
             borderRadius: 20,
-            border: '1px solid #e3e3e3',
+            border: '1.5px solid #85219C',
             pl: 2,
             boxShadow: 'none',
-            mr: { sm: 5}
+            mr: { sm: 5},
+            height: '40px'
         }}
     >
         <input
